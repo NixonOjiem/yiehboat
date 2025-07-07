@@ -1,16 +1,15 @@
 import LandingPage from '@/views/LandingPage.vue'
-import { createRouter, createWebHistory } from 'vue-router'
+//import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import SignUpView from '@/views/SignUpView.vue'
 import BookingView from '@/views/BookingView.vue'
 import TripsPage from '@/views/TripsPage.vue'
 import GalleryView from '@/views/GalleryView.vue'
 import ServicesView from '@/views/ServicesView.vue'
 
-
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
-
     {
       path: '/authentication',
       name: 'authentication',
@@ -26,7 +25,7 @@ const router = createRouter({
       name: 'BookingView',
       component: BookingView,
     },
-     {
+    {
       path: '/trips',
       name: 'TripsPage',
       component: TripsPage,
